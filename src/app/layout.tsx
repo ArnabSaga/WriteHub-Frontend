@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cute Blog Application",
+  title: "WriteHub",
   description:
     "A modern, full-stack Blog Application built to deliver a smooth content-creation experience. Users can publish, update, and manage blog posts with ease, while the system ensures secure authentication, efficient data handling, and responsive UI. The project emphasizes clean code, modular architecture, and performance-focused development, making it both developer-friendly and production-ready.",
 };

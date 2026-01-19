@@ -56,10 +56,10 @@ interface NavbarProps {
 
 const Navbar = ({
   logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
+    url: "/",
+    src: "/logo.svg",
     alt: "logo",
-    title: "Cute BLog Application",
+    title: "WriteHub",
   },
   menu = [
     { title: "Home", url: "/" },
@@ -70,6 +70,10 @@ const Navbar = ({
     {
       title: "About",
       url: "/about",
+    },
+    {
+      title: "Contact",
+      url: "/contact",
     },
   ],
   auth = {
@@ -87,8 +91,8 @@ const Navbar = ({
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
               <Image
-                width={10}
-                height={10}
+                width={20}
+                height={20}
                 src={logo.src}
                 className="max-h-8 dark:invert"
                 alt={logo.alt}
@@ -122,8 +126,8 @@ const Navbar = ({
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
               <Image
-                width={10}
-                height={10}
+                width={20}
+                height={20}
                 src={logo.src}
                 className="max-h-8 dark:invert"
                 alt={logo.alt}
@@ -140,8 +144,8 @@ const Navbar = ({
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
                       <Image
-                        width={10}
-                        height={10}
+                        width={20}
+                        height={20}
                         src={logo.src}
                         className="max-h-8 dark:invert"
                         alt={logo.alt}
