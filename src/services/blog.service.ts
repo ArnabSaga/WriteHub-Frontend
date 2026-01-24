@@ -5,7 +5,14 @@ const API_URL = env.API_URL;
 export const blogService = {
   getBlogPost: async function () {
     try {
-      const res = await fetch(`${API_URL}/posts`);
+      //* SSG => static
+      // const res = await fetch(`${API_URL}/posts`);
+
+      //* ISR => not Static | not Dynamic
+      const res = await fetch(`${API_URL}/posts`, { next: { revalidate: 10 } });
+
+      //* SSR => Dynamic  
+      // const res = await fetch(`${API_URL}/posts`, { cache: "no-store" });
 
       const data = await res.json();
 
