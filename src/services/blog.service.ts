@@ -11,7 +11,7 @@ export const blogService = {
       //* ISR => not Static | not Dynamic
       const res = await fetch(`${API_URL}/posts`, { next: { revalidate: 10 } });
 
-      //* SSR => Dynamic  
+      //* SSR => Dynamic
       // const res = await fetch(`${API_URL}/posts`, { cache: "no-store" });
 
       const data = await res.json();
@@ -23,6 +23,7 @@ export const blogService = {
         */
       return { data: data, error: null };
     } catch (err) {
+      console.log(err);
       return { data: null, err: { message: "Something went wrong" } };
     }
   },
